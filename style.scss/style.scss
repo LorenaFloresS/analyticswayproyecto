@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Orelega+One&display=swap');
+
+@import "footer";
+@import "generales";
+@import "index";
+
+
+*{
+    padding: 1%;
+    margin: 0%;
+}
+
+/* selector - propiedad - valor*/
+
+header{
+    
+    margin-top: 0%;
+    padding: 0px;
+    margin-bottom: 1%;
+    background-color: #E69451;
+    
+
+}
+
+body{
+    padding: 0%;
+    margin: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+backface-visibility: visible;
+
+}
+
+#video{
+    background-color: #AEB3B8;
+    font-family: Times;
+    padding-left: 7%;
+    
+}
+
+
+ul li{
+    list-style-type: none;
+}
+
+ol li{
+    list-style-type: none;
+}
+
+.principal{
+   color: #FFFFFF;
+   font-family:  Georgia, 'Times New Roman', Times, serif;
+   background-color: #AEB3B8;
+   font-family: 'Orelega One', cursive;
+   font-size: larger;
+}
+
+#pasos{
+    color: blueviolet;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 40%;
+    font-size:x-large;
+    background-color: #AEB3B8;
+}
+
+#imagen{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 30%; 
+    background-color: #FAC0C0;
+}
+
+#masinfo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 45%;
+    background-color: #AEB3B8;
+    border-color: #FFFFFF;
+}
+
+#footer{
+    background-color: #AEB3B8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 30px;
+}
+
+
+
+header{
+    height: 1.5cm;
+    nav ul li a{
+        text-decoration: none;
+        font-size: large;
+        margin-bottom: 0%;
+        font-family: arial;
+        color: #FFFFFF;
+        ul li a{
+            text-decoration: none;
+            font-size: large;
+            margin-bottom: 0%;
+            font-family: arial;
+            color: #FFFFFF;
+            li a{
+                text-decoration: none;
+                font-size: large;
+                margin-bottom: 0%;
+                font-family: arial;
+                color: #FFFFFF;
+                
+            }
+            
+        }
+        
+    }
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: large;
+    margin-bottom: 0%;
+    font-family: arial;
+    color: #FFFFFF;
+    
+}
+
+
+nav{
+    display: flex;
+    align-items:center;
+    
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    margin-top: 0%;
+
+}
+
+ul{
+    display: flex;
+    margin-bottom: 0cm;
+}
+
+ul li a{
+    margin: 0cm;
+    margin-bottom: 3cm;
+}
+
+
+.grilla{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    "header header header header"
+    "galeria galeria galeria galeria"
+    "footer footer footer footer"
+    
+   
+}
+
+.header{
+    grid-area: header;
+}
+
+.galeria-grid{
+    grid-area: galeria;
+    background-color: pink;
+}
+
+.padre{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    height: 700px;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: aliceblue;
+}
+
+
+img{
+    border: 5px solid white;
+   
+}
+
+.padre{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    height: 700px;
+    justify-content: center;
+    align-items: end;
+    gap: 15px;
+
+}
+
+body{
+    background-color: pink;
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+header{
+    display: grid
+}
+
+nav ul li{
+    text-transform: uppercase;
+    list-style: none;
+
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FAC0C0;
+    margin-bottom: 0;
+    margin-top: auto;
+
+
+}
+
+.maind-head {
+    grid-area: header;
+}
+
+.main-nav {
+    grid-area: nav;
+}
+
+.pasos{
+    grid-area: pasos;
+}
+
+.imagen{
+    grid-area: imagen;
+}
+
+.masinfo {
+    grid-area: masinfo;
+}
+
+
+
+.padre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 700px;
+    gap:5px;
+    justify-items: center;
+    align-items: end;
+
+}
+
+
+.wrapper{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "galeria-grid"
+    "footer";
+
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    border: white;
+}
+
+@media (mind-width:500px){
+    .wrapper{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "galeria-grid galeria-grid"
+        "footer footer";
+}
+}
+
+@media(min-width: 920px){
+    .padre {
+        grid-template-columns: 1fr 1fr;
+        height: 800px;
+        gap: 10px;
+        align-items: start;
+        justify-items: center;
+    }
+
+    }
+
+img{
+    border: 5px solid white;
+    width: 500px;
+    height: 300px;
+    margin-top: 5px;
+    margin-bottom: 9px;
+
+}
